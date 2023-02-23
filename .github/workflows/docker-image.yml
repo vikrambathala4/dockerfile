@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-nginx-app-git
+      run: docker build . --file Dockerfile --tag vikrambathala/my-nginx-app-git
     - name: Login to docker repo
       run: echo ${{secrets.DOCKER_PASS}} | docker login --username "vikrambathala" --password-stdin
     - name: Push docker image
