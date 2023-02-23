@@ -19,4 +19,4 @@ jobs:
     - name: Login to docker repo
       run: echo ${{secrets.DOCKER_PASS}} | docker login --username "vikrambathala" --password-stdin
     - name: Push docker image
-      run: dokcer push my-nginx-app-git:$(date +%s)
+      run: docker push my-nginx-app-git:$(date +%s)
